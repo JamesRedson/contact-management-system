@@ -2,8 +2,11 @@
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\PasswordController;
+use App\Http\Controllers\Category\CategoryController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\User\UserController;
+use App\Http\Controllers\Contact\ContactController;
+use App\Http\Controllers\Dashboard\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,6 +38,15 @@ Route::middleware('auth')->group(function () {
 	// users
 	Route::resource('users', UserController::class);
 
+	// contacts
+	Route::resource('contacts', ContactController::class);
+
+	// categories
+	Route::resource('categories', CategoryController::class);
+
+	// dashboard
+	Route::resource('dashboards', DashboardController::class);
+	
 });
 
 require __DIR__.'/auth.php';
