@@ -36,10 +36,10 @@
             <td>{{ $category->name }}</td>
             <td>{{ $category->description }}</td>
             <td>
-              <a href="{{ route('categories.edit', $category->id) }}" class="btn btn-sm btn-pill btn-outline-tertiary">Edit</a>
+              <a href="{{ route('categories.edit', $category->id) }}" class="bi bi-pencil-square" style="color: blue;">Edit</a>
 					    
                 {{-- Delete --}}
-              <button class="btn btn-danger mt-2 animate-up-2" type="button" data-bs-toggle="modal" data-bs-target="#modal-delete-{{ $category->id }}">Delete</button>
+              <button class="bi bi-trash-fill" type="button" data-bs-toggle="modal" data-bs-target="#modal-delete-{{ $category->id }}" style="border: none; color: red;">Delete</button>
                 
                 {{-- modal --}}
               <div class="modal fade" id="modal-delete-{{ $category->id }}" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">

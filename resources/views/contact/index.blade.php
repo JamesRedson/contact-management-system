@@ -40,10 +40,11 @@
             <td>{{ $contact->last_name }}</td>
             <td>{{ $contact->email_address }}</td>
             <td>
-              <a href="{{ route('contacts.edit', $contact->id) }}" class="btn btn-sm btn-pill btn-outline-tertiary">Edit</a>
+              <a href="{{ route('contacts.edit', $contact->id) }}" class="bi bi-pencil-square" style="color: blue;">Edit</a>
 					    
                 {{-- Delete --}}
-              <button class="btn btn-danger mt-2 animate-up-2" type="button" data-bs-toggle="modal" data-bs-target="#modal-delete{{ $contact->id }}">Delete</button>
+              <button class="bi bi-trash-fill" type="button" data-bs-toggle="modal" data-bs-target="#modal-delete{{ $contact->id }}" style="border: none; color: red;">Delete</button>
+
                 
                 {{-- modal --}}
               <div class="modal fade" id="modal-delete{{ $contact->id }}" tabindex="-1" role="dialog" aria-labelledby="modal-default" aria-hidden="true">
